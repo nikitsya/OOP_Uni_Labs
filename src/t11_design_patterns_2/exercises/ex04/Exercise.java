@@ -4,6 +4,20 @@ interface TemperatureListener {
     void onTemperatureChanged(double celsius);
 }
 
+class ConsoleDisplayListener implements TemperatureListener {
+    @Override
+    public void onTemperatureChanged(double celsius) {
+        System.out.println("TEMP: " + celsius + "C");
+    }
+}
+
+class OverheatAlarmListener implements TemperatureListener {
+    @Override
+    public void onTemperatureChanged(double celsius) {
+        System.out.println("ALARM: " + celsius + "C");
+    }
+}
+
 class TemperatureSensor {
     void addListener(TemperatureListener l) {
 
