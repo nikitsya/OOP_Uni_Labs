@@ -48,7 +48,12 @@ class ArmouredSlime implements Enemy {
 
 class EnemyFactory {
     Enemy createSlime(Difficulty difficulty) {
-        return null;
+        if (difficulty == Difficulty.EASY) {
+            return new Slime();
+        } else if (difficulty == Difficulty.HARD) {
+            return new ArmouredSlime();
+        }
+        throw new IllegalArgumentException("Invalid difficulty");
     }
 }
 
