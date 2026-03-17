@@ -5,9 +5,9 @@ import java.util.List;
 public class Main {
     public static void main() {
         List<String> codes = List.of(
-                "ie","gb","ie","us",
-                "ch","ua","ie","cz",
-                "gb","ie","ch","ua"
+                "ie", "gb", "ie", "us",
+                "ch", "ua", "ie", "cz",
+                "gb", "ie", "ch", "ua"
         );
     }
 }

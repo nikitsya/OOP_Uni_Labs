@@ -33,6 +33,7 @@ class Checkout {
     public Checkout(PriceStrategy pricing) {
         this.pricing = pricing;
     }
+
     public double price(double basePrice) {
         return pricing.finalPrice(basePrice);
     }
@@ -40,7 +41,7 @@ class Checkout {
 
 public class Exercise {
     public static void run() {
-        double[] basePrices = new double[] { 10.00, 4.00 };
+        double[] basePrices = new double[]{10.00, 4.00};
 
         Checkout none = new Checkout(new NoDiscount());
         Checkout student = new Checkout(new StudentDiscount());

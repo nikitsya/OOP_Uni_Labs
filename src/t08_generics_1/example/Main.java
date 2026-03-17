@@ -1,3 +1,9 @@
+void main() {
+    Result<Integer> r = Result.ok(10);
+    if (r.isOk())
+        System.out.println(r.value() + 5);
+}
+
 static class Result<T> {
     private T _value;
     private String _error;
@@ -26,11 +32,4 @@ static class Result<T> {
     public String error() {
         return _error;
     }
-}
-
-
-void main() {
-    Result<Integer> r = Result.ok(10);
-    if (r.isOk())
-        System.out.println(r.value() + 5);
 }

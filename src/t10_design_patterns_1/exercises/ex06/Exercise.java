@@ -3,6 +3,14 @@ package t10_design_patterns_1.exercises.ex06;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+interface OrderProcessingStrategy {
+    void process(OrderTicket ticket);
+}
+
+interface Command {
+    void execute();
+}
+
 class OrderTicket {
     int ticketId;
     String description;
@@ -21,10 +29,6 @@ class OrderTicket {
     }
 
 
-}
-
-interface OrderProcessingStrategy {
-    void process(OrderTicket ticket);
 }
 
 class ImmediateProcess implements OrderProcessingStrategy {
@@ -50,10 +54,6 @@ class DryRunTraining implements OrderProcessingStrategy {
     public void process(OrderTicket ticket) {
         System.out.println("TRAINING " + ticket.ticketId + " would make: " + ticket.description + " (€" + ticket.totalEuro + ")");
     }
-}
-
-interface Command {
-    void execute();
 }
 
 class ProcessingPolicySelector {

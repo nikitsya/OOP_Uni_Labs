@@ -30,7 +30,7 @@ class JsonParser implements Parser {
     }
 }
 
-class  XmlParser implements Parser {
+class XmlParser implements Parser {
     @Override
     public int parseCount(String input) {
         return 45;

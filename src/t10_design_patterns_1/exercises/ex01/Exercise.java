@@ -45,7 +45,7 @@ public class Exercise {
         Enemy skeleton = new Enemy("Skeleton", 10, new MeleeAttack());
         Enemy archer = new Enemy("Archer", 10, new RangedAttack());
 
-        int[] distances = new int[] { 1, 5, 12 };
+        int[] distances = new int[]{1, 5, 12};
 
         for (int d : distances) {
             System.out.println(skeleton.getName() + " at " + d + "m: " + skeleton.attack(d));

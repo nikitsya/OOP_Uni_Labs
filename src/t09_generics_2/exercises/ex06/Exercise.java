@@ -3,11 +3,14 @@ package t09_generics_2.exercises.ex06;
 import java.util.ArrayList;
 import java.util.List;
 
-class Entity { }
+class Entity {
+}
 
-class Enemy  extends Entity { }
+class Enemy extends Entity {
+}
 
-class Pickup extends Entity { }
+class Pickup extends Entity {
+}
 
 public class Exercise {
 
@@ -17,9 +20,11 @@ public class Exercise {
     }
 
     public static void run() {
-        ArrayList<Enemy> enemies; enemies = new ArrayList<>(List.of(new Enemy(), new Enemy(), new Enemy()));
-        ArrayList<Pickup> pickups; pickups = new ArrayList<>(List.of(new Pickup(), new Pickup()));
-        ArrayList<Entity> world =  new ArrayList<>();
+        ArrayList<Enemy> enemies;
+        enemies = new ArrayList<>(List.of(new Enemy(), new Enemy(), new Enemy()));
+        ArrayList<Pickup> pickups;
+        pickups = new ArrayList<>(List.of(new Pickup(), new Pickup()));
+        ArrayList<Entity> world = new ArrayList<>();
 
         addAllEntities(enemies, world);
         for (Entity e : world) {

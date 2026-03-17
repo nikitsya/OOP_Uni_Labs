@@ -17,7 +17,7 @@ final class Registry<K, V> {
         if (key == null) {
             throw new NullPointerException("key is null");
         }
-        if(containsKey(key)) {
+        if (containsKey(key)) {
             return map.get(key);
         }
         return null;
@@ -33,7 +33,7 @@ final class Registry<K, V> {
 
 public class Exercise {
     public static void run() {
-        Registry<String, Integer>  registry = new Registry<>();
+        Registry<String, Integer> registry = new Registry<>();
         registry.put("Liam", 78);
         registry.put("Sophie", 92);
         registry.put("Daniel", 65);

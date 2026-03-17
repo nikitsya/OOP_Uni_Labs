@@ -2,6 +2,12 @@ package t10_design_patterns_1.exercises.ex05;
 
 import java.util.ArrayDeque;
 
+interface UndoableCommand {
+    void execute();
+
+    void undo();
+}
+
 class Counter {
 
     private int _value = 0;
@@ -13,11 +19,6 @@ class Counter {
     int getValue() {
         return this._value;
     }
-}
-
-interface UndoableCommand {
-    void execute();
-    void undo();
 }
 
 class AddNumberCommand implements UndoableCommand {

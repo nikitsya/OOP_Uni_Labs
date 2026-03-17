@@ -2,7 +2,7 @@ package t09_generics_2.exercises.ex10;
 
 public class Exercise {
     static void run() {
-        String a =  "List<?> a";
+        String a = "List<?> a";
         System.out.println(a + " can only add null");                                           // +
         System.out.println(a + " can read Object\n");                                           // +
 

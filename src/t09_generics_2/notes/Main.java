@@ -8,7 +8,9 @@ public class Main {
         demo();
     }
 
-    /** This is PECS in practice: **/
+    /**
+     * This is PECS in practice:
+     **/
     public static <T> void copy(List<? extends T> src, List<? super T> dst) {
         if (src == null || dst == null)
             throw new NullPointerException("src and dst must not be null");

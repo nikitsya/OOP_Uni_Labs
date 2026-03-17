@@ -1,6 +1,7 @@
 package t08_generics_1.notes;
 
 import java.util.List;
+
 import static java.util.Collections.max;
 
 

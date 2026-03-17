@@ -22,13 +22,16 @@ public class Exercise {
         List<String> strings = new ArrayList<>(List.of("a", "b", "c"));
         List<Integer> integers = new ArrayList<>(List.of(1, 2, 3));
 
-        for (String s : strings) System.out.println(s); System.out.println();
-        for (Integer i : integers) System.out.println(i); System.out.println();
+        for (String s : strings) System.out.println(s);
+        System.out.println();
+        for (Integer i : integers) System.out.println(i);
+        System.out.println();
 
         swapFirstTwo(strings);
         swapFirstTwo(integers);
 
-        for (String s : strings) System.out.println(s); System.out.println();
+        for (String s : strings) System.out.println(s);
+        System.out.println();
         for (Integer i : integers) System.out.println(i);
     }
 }

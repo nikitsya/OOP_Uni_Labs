@@ -2,7 +2,8 @@ package t09_generics_2.exercises.ex02;
 
 import java.util.List;
 
-class Entity { }
+class Entity {
+}
 
 class Lists {
     public static void printAll(List<?> items) {

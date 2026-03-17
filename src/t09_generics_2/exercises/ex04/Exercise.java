@@ -16,8 +16,10 @@ public class Exercise {
     }
 
     public static void run() {
-        List<Object> out = new ArrayList<>(); fill(out, "hi", 3);
-        List<Number> out2 = new ArrayList<>(); fill(out2, 5, 2);
+        List<Object> out = new ArrayList<>();
+        fill(out, "hi", 3);
+        List<Number> out2 = new ArrayList<>();
+        fill(out2, 5, 2);
 
         System.out.println(out);
         System.out.println(out2);

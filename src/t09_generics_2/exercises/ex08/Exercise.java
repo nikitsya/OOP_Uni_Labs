@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-class Entity { }
-class Enemy extends Entity { }
+class Entity {
+}
+
+class Enemy extends Entity {
+}
 
 public class Exercise {
 
@@ -17,7 +20,8 @@ public class Exercise {
     public static void run() {
         List<Enemy> enemies = new ArrayList<>(List.of(new Enemy(), new Enemy(), new Enemy()));
 
-        for (Enemy e : enemies) System.out.println(e.getClass().getSimpleName()); System.out.println();
+        for (Enemy e : enemies) System.out.println(e.getClass().getSimpleName());
+        System.out.println();
 
         Comparator<Entity> entityComparator = (a, b) -> 0;
         sortWith(enemies, entityComparator);

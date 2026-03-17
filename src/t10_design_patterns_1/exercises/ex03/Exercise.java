@@ -1,6 +1,14 @@
 package t10_design_patterns_1.exercises.ex03;
 
 
+interface Command {
+    void execute();
+}
+
+interface TaskExecutionStrategy {
+    void execute(Task task);
+}
+
 class Task {
 
     String _name;
@@ -22,14 +30,6 @@ class Task {
     }
 }
 
-interface Command {
-    void execute();
-}
-
-interface TaskExecutionStrategy {
-    void execute(Task task);
-}
-
 class FastExecution implements TaskExecutionStrategy {
     @Override
     public void execute(Task task) {
@@ -37,7 +37,7 @@ class FastExecution implements TaskExecutionStrategy {
     }
 }
 
-class  SafeExecution implements TaskExecutionStrategy {
+class SafeExecution implements TaskExecutionStrategy {
     @Override
     public void execute(Task task) {
         task.validate();

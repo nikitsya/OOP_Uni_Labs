@@ -1,4 +1,5 @@
 package t08_generics_1.exercises.ex03;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
