@@ -44,6 +44,10 @@ class TemperatureSensor {
     }
 
     void setTemperature(double celsius) {
+        notifyTemperatureChanged(celsius);
+    }
+
+    void notifyTemperatureChanged(double celsius) {
         for (TemperatureListener l : listeners) {
             l.onTemperatureChanged(celsius);
         }
