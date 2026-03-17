@@ -43,6 +43,12 @@ class GatewayCheckoutAdapter implements CheckoutService {
 
 public class Exercise {
     public static void run() {
-        // TODO
+        ThirdPartyGateway gateway = new ThirdPartyGateway();
+        CheckoutService checkout = new GatewayCheckoutAdapter(gateway);
+
+        System.out.println("checkout(0) -> " + checkout.checkout(0));
+        System.out.println("checkout(199) -> " + checkout.checkout(199));
+        System.out.println("checkout(1299) -> " + checkout.checkout(1299));
+        System.out.println("checkout(1205) -> " + checkout.checkout(1205));
     }
 }
