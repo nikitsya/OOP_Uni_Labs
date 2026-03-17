@@ -15,9 +15,17 @@ class ConsoleDisplayListener implements TemperatureListener {
 }
 
 class OverheatAlarmListener implements TemperatureListener {
+    private double _threshold;
+
+    public OverheatAlarmListener(double threshold) {
+        _threshold = threshold;
+    }
+
     @Override
     public void onTemperatureChanged(double celsius) {
-        System.out.println("ALARM: " + celsius + "C");
+        if (celsius >= _threshold) {
+            System.out.println("ALARM: " + celsius + "C");
+        }
     }
 }
 
@@ -44,6 +52,10 @@ class TemperatureSensor {
 
 public class Exercise {
     public static void run() {
-        // TODO
+        TemperatureSensor sensor = new TemperatureSensor();
+
+        sensor.addListener(listener1);
+        sensor.addListener(listener1);
+        sensor.addListener(listener2);
     }
 }
