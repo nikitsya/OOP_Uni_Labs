@@ -59,6 +59,16 @@ class EnemyFactory {
 
 public class Exercise {
     public static void run() {
-        // TODO
+        EnemyFactory factory = new EnemyFactory();
+
+        Enemy enemy1 = factory.createSlime(Difficulty.EASY);
+        Enemy enemy2 = factory.createSlime(Difficulty.HARD);
+
+        System.out.println("EASY -> " + format(enemy1));
+        System.out.println("HARD -> " + format(enemy2));
+    }
+
+    private static String format(Enemy e) {
+        return e.name() + " (hp=" + e.hp() + ", dmg=" + e.damage() + ")";
     }
 }
