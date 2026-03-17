@@ -51,6 +51,9 @@ public class Exercise {
         button.addListener(new SoundListener());
         button.addListener(new AnalyticsListener());
         button.addListener(new AnalyticsListener());
+        button.addListener(new AnalyticsListener());
+
+        button.removeListener(new AnalyticsListener());
 
         button.click();
     }
