@@ -10,6 +10,42 @@ interface Enemy {
     int damage();
 }
 
+class Slime implements Enemy {
+
+    @Override
+    public String name() {
+        return "Slime";
+    }
+
+    @Override
+    public int hp() {
+        return 20;
+    }
+
+    @Override
+    public int damage() {
+        return 3;
+    }
+}
+
+class ArmouredSlime implements Enemy {
+
+    @Override
+    public String name() {
+        return "ArmouredSlime";
+    }
+
+    @Override
+    public int hp() {
+        return 45;
+    }
+
+    @Override
+    public int damage() {
+        return 6;
+    }
+}
+
 class EnemyFactory {
     Enemy createSlime(Difficulty difficulty) {
         return null;
