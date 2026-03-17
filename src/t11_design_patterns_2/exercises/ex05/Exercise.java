@@ -6,22 +6,28 @@ interface Logger {
 
 class LegacyLogger {
     void logMessage(String msg) {
-        System.out.println("LEGACY: " + msg+);
+        System.out.println("LEGACY: " + msg);
     }
 }
 
 class LegacyLoggerAdapter implements Logger {
-    LegacyLoggerAdapter(LegacyLogger legacy) {
 
+    LegacyLogger _legacy = new LegacyLogger();
+
+    LegacyLoggerAdapter(LegacyLogger legacy) {
+        if (legacy == null) throw new IllegalArgumentException("legacy is null.");
+        _legacy = legacy;
     }
 
-    void log(String msg) {
-
+    @Override
+    public void log(String msg) {
+        _legacy.logMessage(msg);
     }
 }
 
 public class Exercise {
     public static void run() {
-        // TODO
+        LegacyLoggerAdapter legacy = new LegacyLoggerAdapter(new LegacyLogger());
+        legacy.log("Hello World!");
     }
 }
