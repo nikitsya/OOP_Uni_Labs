@@ -42,9 +42,16 @@ class AnalyticsListener implements ClickListener {
     }
 }
 
-
 public class Exercise {
     public static void run() {
-        // TODO
+        Button button = new Button();
+
+        button.addListener(new SoundListener());
+        button.addListener(new AnalyticsListener());
+        button.addListener(new SoundListener());
+        button.addListener(new AnalyticsListener());
+        button.addListener(new AnalyticsListener());
+
+        button.click();
     }
 }
