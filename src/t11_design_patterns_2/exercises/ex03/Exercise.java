@@ -24,6 +24,21 @@ class Button {
     }
 }
 
+class SoundListener implements ClickListener {
+    @Override
+    public void onClick() {
+        System.out.println("SFX: click");
+    }
+}
+
+class AnalyticsListener implements ClickListener {
+    @Override
+    public void onClick() {
+        System.out.println("ANALYTICS: click");
+    }
+}
+
+
 public class Exercise {
     public static void run() {
         // TODO
