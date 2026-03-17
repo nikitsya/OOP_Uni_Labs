@@ -1,5 +1,8 @@
 package t11_design_patterns_2.exercises.ex04;
 
+import java.util.ArrayList;
+import java.util.List;
+
 interface TemperatureListener {
     void onTemperatureChanged(double celsius);
 }
@@ -19,16 +22,23 @@ class OverheatAlarmListener implements TemperatureListener {
 }
 
 class TemperatureSensor {
-    void addListener(TemperatureListener l) {
 
+    List<TemperatureListener> listeners = new ArrayList<>();
+
+    void addListener(TemperatureListener l) {
+        if (l == null) throw new NullPointerException("TemperatureListener is null");
+        listeners.add(l);
     }
 
     boolean removeListener(TemperatureListener l) {
-        return false;
+        if (l == null) throw new NullPointerException("TemperatureListener is null");
+        return listeners.remove(l);
     }
 
     void setTemperature(double celsius) {
-
+        for (TemperatureListener l : listeners) {
+            l.onTemperatureChanged(celsius);
+        }
     }
 }
 
