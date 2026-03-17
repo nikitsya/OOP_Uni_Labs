@@ -46,14 +46,17 @@ public class Exercise {
     public static void run() {
         Button button = new Button();
 
-        button.addListener(new SoundListener());
-        button.addListener(new AnalyticsListener());
-        button.addListener(new SoundListener());
-        button.addListener(new AnalyticsListener());
-        button.addListener(new AnalyticsListener());
-        button.addListener(new AnalyticsListener());
+        SoundListener soundListener = new SoundListener();
+        AnalyticsListener analyticsListener = new AnalyticsListener();
 
-        button.removeListener(new AnalyticsListener());
+        button.addListener(analyticsListener);
+        button.addListener(soundListener);
+        button.addListener(analyticsListener);
+        button.addListener(soundListener);
+        button.addListener(analyticsListener);
+        button.addListener(analyticsListener);
+
+        button.removeListener(analyticsListener);
 
         button.click();
     }
