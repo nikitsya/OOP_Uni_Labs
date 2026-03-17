@@ -6,7 +6,9 @@ interface CheckoutService {
 
 class ThirdPartyGateway {
     boolean makePayment(String euroAmount) {
-        return false;
+        if (euroAmount.startsWith("0.00")) return false;
+        System.out.print("PAID: " + euroAmount);
+        return true;
     }
 }
 
