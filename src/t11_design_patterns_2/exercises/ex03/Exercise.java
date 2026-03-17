@@ -12,15 +12,19 @@ class Button {
     List<ClickListener> listeners = new ArrayList<>();
 
     void addListener(ClickListener l) {
-
+        if (l == null) throw new NullPointerException();
+        listeners.add(l);
     }
 
     boolean removeListener(ClickListener l) {
-        return false;
+        if (l == null) throw new NullPointerException();
+        return listeners.remove(l);
     }
 
     void click() {
-
+        for (ClickListener l : listeners) {
+            l.onClick();
+        }
     }
 }
 
