@@ -57,9 +57,9 @@ class TemperatureSensor {
 public class Exercise {
     public static void run() {
         TemperatureSensor sensor = new TemperatureSensor();
-
-        sensor.addListener(listener1);
-        sensor.addListener(listener1);
-        sensor.addListener(listener2);
+        sensor.addListener(new ConsoleDisplayListener());
+        sensor.addListener(new OverheatAlarmListener(50));
+        sensor.setTemperature(30);
+        sensor.setTemperature(60);
     }
 }
