@@ -6,7 +6,7 @@ interface Logger {
 
 class LegacyLogger {
     void logMessage(String msg) {
-
+        System.out.println("LEGACY: " + msg+);
     }
 }
 
